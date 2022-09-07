@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'feedback/css/base.css'%}">
+    {% block link %}
+
+    {% endblock %}
+    <title>FeedBack.ru</title>
+</head>
+<body>
+    <!-- НАВИГАЦИЯ ПО САЙТУ -->
+    <header>
+        <nav class="navbar">
+        <div class="navbar-row">
+            <div class="navbar-row__item">
+                <a href="{% url 'fb-home' %}" class="txt-menu">Главная</a>
+                <a href="{% url 'fb-about' %}" class="txt-menu">О сайте</a>
+            </div>
+            <div class="navbar-row__item">
+                <a href="{% url 'fb-home' %}" class="txt-menu brand">FeedBack</a>
+            </div>
+            <div class="navbar-row__item">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'fb-add' %}" class="txt-menu">Написать отзыв</a>
+                    <a href="{% url 'logout' %}" class="txt-menu">Выход</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="txt-menu">Вход</a>
+                    <a href="{% url 'signup' %}" class="txt-menu">Регистрация</a>
+                {% endif %}
+            </div>
+        </div>
+        </nav>
+    </header>
+
+    <!-- СОДЕРЖИМОЕ СТРАНИЦЫ -->
+    <main class="main" >
+        <div class="title"><h2 class="txt-title page-title">{{ title }}</h2></div>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer txt-menu txt-footer">Copyright © 2021-2022</footer>
+</body>
+</html>
+

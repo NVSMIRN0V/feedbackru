@@ -1,0 +1,32 @@
+{% extends 'feedback/base.html' %}
+{% load static %}
+{% block link %}
+    <link rel="stylesheet" href="{% static 'feedback/css/add.css' %}">
+{% endblock %}
+{% block content %}
+    <form method="post" class="form-wrapper">
+        {% csrf_token %}
+            <div class="form add">
+                <label class="txt-title txt-label"><h3>Заголовок отзыва:</h3></label>
+                {{ form.title }}
+<!--                <input type="text" class="input-field" placeholder="Feedback title">-->
+
+                <label class="txt-title txt-label"><h3>Категория отзыва:</h3></label>
+                {{ form.category }}
+<!--                <select name="category" class="cat-select">-->
+<!--                    <option value="">cat</option>-->
+<!--                    <option value="">cat</option>-->
+<!--                    <option value="">cat</option>-->
+<!--                </select>-->
+
+                <label class="txt-title txt-label"><h3>Текст отзыва</h3></label>
+                {{ form.content }}
+<!--                <textarea name="" id="" cols="30" rows="10" class="text"></textarea>-->
+
+
+                <div class="subtitle">
+                    <button class="btn txt-btn">Подтвердить</button>
+                </div>
+            </div>
+    </form>
+{% endblock %}

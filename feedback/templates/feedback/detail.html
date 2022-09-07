@@ -1,0 +1,86 @@
+{% extends 'feedback/base.html' %}
+{% load static %}
+{% block link %}
+    <link rel="stylesheet" href="{% static 'feedback/css/detail.css' %}">
+{% endblock %}
+{% block content %}
+         <!-- ОТЗЫВ-->
+        <div class="main-columns">
+            <div class="main-columns__item content">
+
+                    <div class="article">
+                        <div class="article__header">
+                            <a href="#" class="article__author">{{ feedback.author }}</a>
+                            <small class="article__date">{{ feedback.published_date }}</small>
+                        </div>
+
+                         <h3 class="txt-title article-title">{{ feedback.title }}</h3>
+                         <div class="article__content">
+                            <p>
+                                {{ feedback.content }}
+                            </p>
+                        </div>
+                    </div>
+
+            </div>
+
+        <!-- КОММЕНТАРИИ -->
+        <div class="main-columns__item side">
+                <div class="title"><h2 class="txt-title">Комментарии к отзыву:</h2></div>
+                <div class="comments-list">
+                    <ul>
+                        <li class="comment">
+                            <div class="comment__header">
+                                <a href="#" class="comment__author">Имя автора</a>
+                                <small class="comment__date">25 августа 2022 14:54</small>
+                            </div>
+
+                            <p class="comment__content">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi et dolorum nesciunt deserunt dolore tempora dolorem expedita corrupti reiciendis ad voluptatibus, optio, ex veniam eum fugit ullam sed sapiente eligendi.
+                            </p>
+                        </li>
+                        <li class="comment">
+                            <div class="comment__header">
+                                <a href="#" class="comment__author">Имя автора</a>
+                                <small class="comment__date">25 августа 2022 14:54</small>
+                            </div>
+
+                            <p class="comment__content">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi et dolorum nesciunt deserunt dolore tempora dolorem expedita corrupti reiciendis ad voluptatibus, optio, ex veniam eum fugit ullam sed sapiente eligendi.
+                            </p>
+                        </li>
+                        <li class="comment">
+                            <div class="comment__header">
+                                <a href="#" class="comment__author">Имя автора</a>
+                                <small class="comment__date">25 августа 2022 14:54</small>
+                            </div>
+
+                            <p class="comment__content">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi et dolorum nesciunt deserunt dolore tempora dolorem expedita corrupti reiciendis ad voluptatibus, optio, ex veniam eum fugit ullam sed sapiente eligendi.
+                            </p>
+                        </li>
+                                                <li class="comment">
+                            <div class="comment__header">
+                                <a href="#" class="comment__author">Имя автора</a>
+                                <small class="comment__date">25 августа 2022 14:54</small>
+                            </div>
+
+                            <p class="comment__content">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi et dolorum nesciunt deserunt dolore tempora dolorem expedita corrupti reiciendis ad voluptatibus, optio, ex veniam eum fugit ullam sed sapiente eligendi.
+                            </p>
+                        </li>
+                                                <li class="comment">
+                            <div class="comment__header">
+                                <a href="#" class="comment__author">Имя автора</a>
+                                <small class="comment__date">25 августа 2022 14:54</small>
+                            </div>
+
+                            <p class="comment__content">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi et dolorum nesciunt deserunt dolore tempora dolorem expedita corrupti reiciendis ad voluptatibus, optio, ex veniam eum fugit ullam sed sapiente eligendi.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,68 @@
+.form {
+    box-shadow: 0 0 7px 3px #FFD8BE;
+    width: 40%;
+    margin: 11% auto 0;
+    padding: 20px;
+}
+.register {
+    margin: 3.5% auto 0;
+}
+.input-field, input[name="username"], input[name="password"] {
+    padding: 5px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 7px 3px #45062E;
+    margin-right: 10px;
+    background-color: #fffbf4;
+    border: none;
+    height: 30px;
+}
+.input-field:focus, input[name="username"]:focus, input[name="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 7px 5px #45062E;
+}
+.input-field::placeholder,  input[name="username"]::placeholder, input[name="password"]::placeholder {
+    text-shadow: #7F055F 0 0 3px;
+    font-size: 12px;
+    font-family: 'Verdana';
+    font-weight: 600;
+    color: #FFFFCC;
+}
+.txt-label{
+    text-align: start;
+}
+.subtitle {
+    display: flex;
+    justify-content: end;
+}
+.btn {
+    width: 40%;
+    box-sizing: border-box;
+    background-color: #fffbf4;
+    border-radius: 5px;
+    box-shadow: 0 0 7px 3px #45062E;
+    border: none;
+    height: 30px;
+}
+.btn:hover {
+    box-shadow: 0 0 7px 5px #45062E;
+    color: #fff;
+}
+.btn:focus {
+    background: #7F055F;
+    border: none;
+    color: #fff;
+}
+.txt-btn {
+    text-shadow: #7F055F 0 0 5px;
+    margin: 10px;
+    font-family: 'Verdana';
+    font-weight: 600;
+    color: #FFFFCC;
+}
+
+
+

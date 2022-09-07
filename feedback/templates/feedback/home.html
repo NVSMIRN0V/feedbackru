@@ -1,0 +1,49 @@
+{% extends 'feedback/base.html' %}
+{% load static %}
+{% block link %}
+    <link rel="stylesheet" href="{% static 'feedback/css/home.css' %}">
+{% endblock %}
+{% block content %}
+   <div class="main-columns">
+        <div class="main-columns__item side">
+             <!-- КАТЕГОРИИ -->
+            <div class="title"><h2 class="txt-title">Отзывы по категориям:</h2></div>
+            <ul>
+                {% if category_selected == 0 %}
+                    <li class="category"><a href="#" class="txt-cat txt-cat-selected">Все категории</a></li>
+                {% else %}
+                    <li class="category"><a href="{% url 'fb-home' %}" class="txt-cat">Все категории</a></li>
+                {% endif %}
+
+                {% for c in categories %}
+                    {% if c.pk == category_selected %}
+                        <li class="category"><a href="#" class="txt-cat txt-cat-selected">{{ c.name }}</a></li>
+                    {% else %}
+                        <li class="category"><a href="{{ c.get_absolute_url }}" class="txt-cat">{{ c.name }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+       </div>
+
+        <!-- ОТЗЫВЫ -->
+        <div class="main-columns__item content">
+            <ul>
+                {% for fb in feedbacks %}
+                 <!-- ОТЗЫВ ## -->
+                    <li class="article">
+                        <div class="article__header">
+                            <a href="#" class="article__author">{{ fb.author }}</a>
+                            <small class="article__date">{{ fb.published_date }}</small>
+                        </div>
+
+                        <a href="{{ fb.get_absolute_url }}" class="txt-title article-title"><h3>{{ fb.title }}</h3></a>
+                        <p class="article__content">
+                          {{ fb.content|truncatewords:20 }}
+                        </p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+

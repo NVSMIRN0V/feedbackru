@@ -1,0 +1,78 @@
+/* СОДЕРЖИМОЕ MAIN */
+.main-columns {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 160px - 60px - 20px);
+}
+.main-columns__item {
+    margin: 20px 20px 0;
+    box-shadow: 0 0 7px 3px #FFD8BE;
+}
+.info {
+    width: 70%;
+    padding: 10px 10px 0;
+}
+.contacts{
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+}
+
+.contacts__item {
+    margin: 14px 0 0;
+    height: 48px;
+    width: 100%;
+    box-shadow: 0 0 7px 3px #FFD8BE;
+}
+.info p {
+    text-align: justify;
+    padding: 10px 10px;
+    color: #45062E;
+    font-family: "Verdana";
+    font-size: 16px;
+}
+.txt-menu {
+    text-shadow: #7F055F 0 0 5px;
+    margin: 10px;
+    font-size: 20px;
+    font-family: 'Verdana';
+    font-weight: 600;
+    color: #FFFFCC;
+}
+.txt-menu:hover {
+    color: #fff;
+}
+.txt-footer{
+    font-size: 12px;
+    margin: 0;
+}
+.txt-footer:hover{
+    color: #FFFFCC;
+}
+.brand {
+    font-family: 'BRUSH SCRIPT MT';
+    font-size: 50px;
+    font-weight: 700;
+}
+.title-about{
+    text-shadow: #7F055F 0 0 1px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    color: #7F055F;
+    font-family: "Georgia";
+}
+.txt-cat{
+    text-decoration: none;
+    font-family: "Georgia";
+    line-height: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #7F055F;
+}
+.txt-cat:hover {
+    font-size: 18px;
+    color: #E5A4CB
+}

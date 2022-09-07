@@ -1,0 +1,51 @@
+{% extends 'feedback/base.html' %}
+{% load static %}
+{% block link %}
+    <link rel="stylesheet" href="{% static 'feedback/css/about.css' %}">
+{% endblock %}
+{% block content %}
+ <!-- ИНФО -->
+    <div class="main-columns">
+        <div class="main-columns__item info">
+            <div class="title"><h2 class="title-about">Информация:</h2></div>
+            <p>
+                Сайт разрабатывался в качестве практической части при изучении фреймворка <big><b>Django</b></big>.
+                Т.к. основной целью была backend-разработка на Python/Django, то именно на изучение этого материала была
+                потрачена
+                большая часть времени. Соответственно front-часть сайта пострадала: примитивные шаблоны, нерациональные
+                решения при
+                верстке, <em style="color: #ff6e4a">скудный</em> <b style="color: #00ffff">набор</b> <em
+                    style="color: #ffff00; background-color: #acacac;">цветов</em> и <span
+                    style="font-family:Impact, Charcoal, sans-serif;">шрифтов</span> на <span
+                    style="font-family:Comic Sans MS, cursive;">страницах сайта</span>, бесконечные выпирания то тут, то
+                там и многие другие
+                проблемы.
+            </p>
+
+            <p>
+                Зачем вообще было делать front-часть, если этого не требовалось? Неизвестно.
+            </p>
+
+            <p>
+                Наверное, этого текста хватит для заполнения пространства страницы "О сайте".
+            </p>
+        </div>
+
+        <!-- КОНТАКТЫ -->
+        <div class="main-columns__item contacts">
+            <div class="title"><h2 class="title-about">Контакты:</h2></div>
+
+            <ul>
+                <li class="contacts__item">
+                    <p>
+                        <a href="https://vk.com/youarehonored" class="txt-cat">VK</a>
+                    </p>
+                </li>
+                <li class="contacts__item">
+                    <p>
+                        <a href="https://github.com/NVSMIRN0V" class="txt-cat">GitHub</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'feedback/base.html' %}
+{% load static %}
+{% block link %}
+    <link rel="stylesheet" href="{% static 'user/css/login.css' %}">
+{% endblock %}
+{% block content %}
+    <form method="post" class="form-wrapper">
+        {% csrf_token %}
+        <div class="form">
+            <label class="txt-title txt-label"><h3>Имя пользователя:</h3></label>
+            {{ form.username }}
+
+            <label class="txt-title txt-label"><h3>Пароль:</h3></label>
+            {{ form.password }}
+
+            <div class="subtitle">
+                <button class="btn txt-btn">Подтвердить</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
