@@ -67,8 +67,6 @@ class FeedbackCategory(ListView):
 
     def get_queryset(self):
         feedbacks = Feedback.objects.filter(category_id=self.kwargs['category_pk'])
-        if len(feedbacks) == 0:
-            raise Http404()
         return feedbacks
 
     def get_context_data(self, *, object_list=None, **kwargs):
